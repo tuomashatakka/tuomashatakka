@@ -47,10 +47,19 @@ jobs:
 
           # Generate index.html from template
           cp templates/index.html public/index.html
-          sed -i "s|{{REPO_COUNT}}|$REPO_COUNT|g" public/index.html
-          sed -i "s|{{TOTAL_STARS}}|$TOTAL_STARS|g" public/index.html
-          sed -i "s|{{TOTAL_FORKS}}|$TOTAL_FORKS|g" public/index.html
-          sed -i "s|{{REPOS_DATA}}|$REPOS_DATA|g" public/index.html
+
+          # Use Python to replace all placeholders (avoids "Argument list too long" error)
+          python3 << PYEOF
+          import json
+          with open('public/index.html', 'r') as f:
+              html_content = f.read()
+          html_content = html_content.replace('{{REPO_COUNT}}', '$REPO_COUNT')
+          html_content = html_content.replace('{{TOTAL_STARS}}', '$TOTAL_STARS')
+          html_content = html_content.replace('{{TOTAL_FORKS}}', '$TOTAL_FORKS')
+          html_content = html_content.replace('{{REPOS_DATA}}', '''$REPOS_DATA''')
+          with open('public/index.html', 'w') as f:
+              f.write(html_content)
+          PYEOF
 
           # Generate repos.svg from template
           HTML_CONTENT=$(cat public/index.html)
