@@ -26,6 +26,9 @@ jobs:
 
           echo "Fetching repositories for tuomashatakka..."
 
+          # Create public directory (may be gitignored)
+          mkdir -p public
+
           # Fetch all public repos
           REPOS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
             "https://api.github.com/users/tuomashatakka/repos?type=public&sort=updated&per_page=100")
