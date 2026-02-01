@@ -57,7 +57,6 @@
       border-radius: 12px;
       padding: 20px;
       transition: all 0.3s ease;
-      cursor: pointer;
     }
     .repo-card:hover {
       background: rgba(255, 255, 255, 0.15);
@@ -120,35 +119,9 @@
       </div>
     </div>
 
-    <div class="repos-grid" id="repos-container"></div>
+    <div class="repos-grid">
+{{REPOS_GRID}}
+    </div>
   </div>
-
-  <script>
-    const repos = {{REPOS_DATA}};
-
-    const container = document.getElementById('repos-container');
-    repos.forEach(repo => {
-      const card = document.createElement('div');
-      card.className = 'repo-card';
-      card.onclick = () => window.open(repo.html_url, '_blank');
-
-      const description = repo.description || 'No description provided';
-      const language = repo.language ? `<span class="language">${repo.language}</span>` : '';
-      const updatedDate = new Date(repo.updated_at).toLocaleDateString();
-
-      card.innerHTML = `
-        <a class="repo-name" href="${repo.html_url}" target="_blank">${repo.name}</a>
-        <div class="repo-description">${description}</div>
-        <div class="repo-meta">
-          <span class="meta-item">⭐ ${repo.stargazers_count}</span>
-          <span class="meta-item">🍴 ${repo.forks_count}</span>
-          <span class="meta-item">📅 ${updatedDate}</span>
-        </div>
-        ${language}
-      `;
-
-      container.appendChild(card);
-    });
-  </script>
 </body>
 </html>

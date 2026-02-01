@@ -51,21 +51,53 @@ jobs:
           # Generate index.html from template
           cp templates/index.html public/index.html
 
-          # Use Python to replace all placeholders (avoids "Argument list too long" error)
+          # Use Python to replace placeholders and generate static HTML cards
           python3 << PYEOF
           import json
-          import html
+          import html as html_module
+          from datetime import datetime
+
           with open('public/index.html', 'r') as f:
               html_content = f.read()
 
-          # HTML-escape the JSON to prevent XML parsing errors in SVG context
+          # Parse repos data
           repos_data = '''$REPOS_DATA'''
-          repos_data_escaped = html.escape(repos_data, quote=False)
+          repos = json.loads(repos_data)
 
+          # Generate static HTML cards for repos (no JavaScript needed!)
+          cards_html = []
+          for repo in repos:
+              name = html_module.escape(repo['name'])
+              description = html_module.escape(repo.get('description') or 'No description provided')
+              url = html_module.escape(repo['html_url'])
+              stars = repo['stargazers_count']
+              forks = repo['forks_count']
+              language = repo.get('language')
+              updated = datetime.fromisoformat(repo['updated_at'].replace('Z', '+00:00')).strftime('%Y-%m-%d')
+
+              language_html = f'<span class="language">{html_module.escape(language)}</span>' if language else ''
+
+              card_html = f'''
+              <div class="repo-card">
+                <a class="repo-name" href="{url}" target="_blank">{name}</a>
+                <div class="repo-description">{description}</div>
+                <div class="repo-meta">
+                  <span class="meta-item">⭐ {stars}</span>
+                  <span class="meta-item">🍴 {forks}</span>
+                  <span class="meta-item">📅 {updated}</span>
+                </div>
+                {language_html}
+              </div>'''
+              cards_html.append(card_html)
+
+          repos_grid_html = '\n'.join(cards_html)
+
+          # Replace placeholders
           html_content = html_content.replace('{{REPO_COUNT}}', '$REPO_COUNT')
           html_content = html_content.replace('{{TOTAL_STARS}}', '$TOTAL_STARS')
           html_content = html_content.replace('{{TOTAL_FORKS}}', '$TOTAL_FORKS')
-          html_content = html_content.replace('{{REPOS_DATA}}', repos_data_escaped)
+          html_content = html_content.replace('{{REPOS_GRID}}', repos_grid_html)
+
           with open('public/index.html', 'w') as f:
               f.write(html_content)
           PYEOF
