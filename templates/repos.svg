@@ -1,0 +1,7 @@
+<svg width="1200" height="{{SVG_HEIGHT}}" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="1200" height="{{SVG_HEIGHT}}">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+{{HTML_CONTENT}}
+    </div>
+  </foreignObject>
+</svg>

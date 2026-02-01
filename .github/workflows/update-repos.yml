@@ -1,0 +1,97 @@
+name: Update Repository List
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Daily at midnight UTC
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch repositories and generate artifacts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+
+          echo "Fetching repositories for tuomashatakka..."
+
+          # Fetch all public repos
+          REPOS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/users/tuomashatakka/repos?type=public&sort=updated&per_page=100")
+
+          # Save raw JSON
+          echo "$REPOS" | jq '.' > public/repos.json
+
+          # Calculate stats
+          REPO_COUNT=$(echo "$REPOS" | jq 'length')
+          TOTAL_STARS=$(echo "$REPOS" | jq '[.[].stargazers_count] | add')
+          TOTAL_FORKS=$(echo "$REPOS" | jq '[.[].forks_count] | add')
+          REPOS_DATA=$(echo "$REPOS" | jq -c .)
+
+          # Calculate SVG height based on repo count
+          ROWS=$(( (REPO_COUNT + 3) / 4 ))
+          SVG_HEIGHT=$(( 400 + ROWS * 220 ))
+
+          echo "Stats: $REPO_COUNT repos, $TOTAL_STARS stars, $TOTAL_FORKS forks"
+
+          # Generate index.html from template
+          cp templates/index.html public/index.html
+          sed -i "s|{{REPO_COUNT}}|$REPO_COUNT|g" public/index.html
+          sed -i "s|{{TOTAL_STARS}}|$TOTAL_STARS|g" public/index.html
+          sed -i "s|{{TOTAL_FORKS}}|$TOTAL_FORKS|g" public/index.html
+          sed -i "s|{{REPOS_DATA}}|$REPOS_DATA|g" public/index.html
+
+          # Generate repos.svg from template
+          HTML_CONTENT=$(cat public/index.html)
+          cp templates/repos.svg public/repos.svg
+
+          # Replace placeholders in SVG
+          # Using a temp file to handle multiline replacement
+          awk -v height="$SVG_HEIGHT" '{gsub(/{{SVG_HEIGHT}}/, height); print}' public/repos.svg > public/repos.svg.tmp
+          mv public/repos.svg.tmp public/repos.svg
+
+          # Replace HTML content placeholder
+          # This is tricky with sed, so we'll use a different approach
+          python3 << 'PYEOF'
+          import sys
+          with open('public/repos.svg', 'r') as f:
+              svg_content = f.read()
+          with open('public/index.html', 'r') as f:
+              html_content = f.read()
+          svg_content = svg_content.replace('{{HTML_CONTENT}}', html_content)
+          with open('public/repos.svg', 'w') as f:
+              f.write(svg_content)
+          PYEOF
+
+          echo "Generated artifacts in public/ directory"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: repository-data
+          path: public/
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git add public/
+          git diff --cached --exit-code || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push if changed
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update repository visualization [skip ci]"
+          git push
