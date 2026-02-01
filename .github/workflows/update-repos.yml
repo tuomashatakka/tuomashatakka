@@ -62,23 +62,33 @@ jobs:
           PYEOF
 
           # Generate repos.svg from template
-          HTML_CONTENT=$(cat public/index.html)
           cp templates/repos.svg public/repos.svg
 
-          # Replace placeholders in SVG
-          # Using a temp file to handle multiline replacement
-          awk -v height="$SVG_HEIGHT" '{gsub(/{{SVG_HEIGHT}}/, height); print}' public/repos.svg > public/repos.svg.tmp
-          mv public/repos.svg.tmp public/repos.svg
-
-          # Replace HTML content placeholder
-          # This is tricky with sed, so we'll use a different approach
+          # Extract styles and body content from HTML for SVG embedding
           python3 << 'PYEOF'
-          import sys
-          with open('public/repos.svg', 'r') as f:
-              svg_content = f.read()
+          import re
           with open('public/index.html', 'r') as f:
               html_content = f.read()
-          svg_content = svg_content.replace('{{HTML_CONTENT}}', html_content)
+
+          # Extract style content
+          style_match = re.search(r'<style>(.*?)</style>', html_content, re.DOTALL)
+          styles = style_match.group(1) if style_match else ''
+
+          # Extract body content
+          body_match = re.search(r'<body>(.*?)</body>', html_content, re.DOTALL)
+          body_content = body_match.group(1) if body_match else ''
+
+          # Combine for SVG foreignObject (styles need to be in a style tag)
+          svg_html_content = f'<style>{styles}</style>{body_content}'
+
+          # Read and update SVG
+          with open('public/repos.svg', 'r') as f:
+              svg_content = f.read()
+
+          # Replace placeholders
+          svg_content = svg_content.replace('{{SVG_HEIGHT}}', '$SVG_HEIGHT')
+          svg_content = svg_content.replace('{{HTML_CONTENT}}', svg_html_content)
+
           with open('public/repos.svg', 'w') as f:
               f.write(svg_content)
           PYEOF
