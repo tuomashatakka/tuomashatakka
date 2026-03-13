@@ -120,6 +120,17 @@
     <div class="repos-grid">
 
     <div class="repo-card">
+      <a class="repo-name" href="https://github.com/tuomashatakka/tuomashatakka" target="_blank">tuomashatakka</a>
+      <div class="repo-description">No description provided</div>
+      <div class="repo-meta">
+        <span class="meta-item">⭐ 0</span>
+        <span class="meta-item">🍴 0</span>
+        <span class="meta-item">📅 2026-03-12</span>
+      </div>
+      <span class="language">HTML</span>
+    </div>
+
+    <div class="repo-card">
       <a class="repo-name" href="https://github.com/tuomashatakka/android-photofeed" target="_blank">android-photofeed</a>
       <div class="repo-description">Android image gallery app</div>
       <div class="repo-meta">
@@ -139,17 +150,6 @@
         <span class="meta-item">📅 2026-03-11</span>
       </div>
       <span class="language">JavaScript</span>
-    </div>
-
-    <div class="repo-card">
-      <a class="repo-name" href="https://github.com/tuomashatakka/tuomashatakka" target="_blank">tuomashatakka</a>
-      <div class="repo-description">No description provided</div>
-      <div class="repo-meta">
-        <span class="meta-item">⭐ 0</span>
-        <span class="meta-item">🍴 0</span>
-        <span class="meta-item">📅 2026-03-11</span>
-      </div>
-      <span class="language">HTML</span>
     </div>
 
     <div class="repo-card">
