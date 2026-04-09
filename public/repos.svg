@@ -104,7 +104,7 @@
 
     <div class="stats">
       <div class="stat-card">
-        <span class="stat-value">80</span>
+        <span class="stat-value">81</span>
         <span class="stat-label">Repositories</span>
       </div>
       <div class="stat-card">
@@ -120,12 +120,23 @@
     <div class="repos-grid">
 
     <div class="repo-card">
+      <a class="repo-name" href="https://github.com/tuomashatakka/luckywheel" target="_blank">luckywheel</a>
+      <div class="repo-description">spin and win</div>
+      <div class="repo-meta">
+        <span class="meta-item">⭐ 0</span>
+        <span class="meta-item">🍴 0</span>
+        <span class="meta-item">📅 2026-04-08</span>
+      </div>
+      <span class="language">TypeScript</span>
+    </div>
+
+    <div class="repo-card">
       <a class="repo-name" href="https://github.com/tuomashatakka/tuomashatakka" target="_blank">tuomashatakka</a>
       <div class="repo-description">No description provided</div>
       <div class="repo-meta">
         <span class="meta-item">⭐ 0</span>
         <span class="meta-item">🍴 0</span>
-        <span class="meta-item">📅 2026-04-07</span>
+        <span class="meta-item">📅 2026-04-08</span>
       </div>
       <span class="language">HTML</span>
     </div>
