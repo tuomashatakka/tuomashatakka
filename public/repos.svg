@@ -108,7 +108,7 @@
         <span class="stat-label">Repositories</span>
       </div>
       <div class="stat-card">
-        <span class="stat-value">52</span>
+        <span class="stat-value">54</span>
         <span class="stat-label">Stars</span>
       </div>
       <div class="stat-card">
@@ -118,6 +118,39 @@
     </div>
 
     <div class="repos-grid">
+
+    <div class="repo-card">
+      <a class="repo-name" href="https://github.com/tuomashatakka/aueio-player-desktop" target="_blank">aueio-player-desktop</a>
+      <div class="repo-description">No description provided</div>
+      <div class="repo-meta">
+        <span class="meta-item">⭐ 6</span>
+        <span class="meta-item">🍴 0</span>
+        <span class="meta-item">📅 2026-04-30</span>
+      </div>
+      <span class="language">JavaScript</span>
+    </div>
+
+    <div class="repo-card">
+      <a class="repo-name" href="https://github.com/tuomashatakka/eslint-config" target="_blank">eslint-config</a>
+      <div class="repo-description">Default eslint configuration for tuomashatakka&#x27;s projects pls</div>
+      <div class="repo-meta">
+        <span class="meta-item">⭐ 1</span>
+        <span class="meta-item">🍴 0</span>
+        <span class="meta-item">📅 2026-04-30</span>
+      </div>
+      <span class="language">JavaScript</span>
+    </div>
+
+    <div class="repo-card">
+      <a class="repo-name" href="https://github.com/tuomashatakka/tuomashatakka" target="_blank">tuomashatakka</a>
+      <div class="repo-description">No description provided</div>
+      <div class="repo-meta">
+        <span class="meta-item">⭐ 0</span>
+        <span class="meta-item">🍴 0</span>
+        <span class="meta-item">📅 2026-04-30</span>
+      </div>
+      <span class="language">HTML</span>
+    </div>
 
     <div class="repo-card">
       <a class="repo-name" href="https://github.com/tuomashatakka/stellar-explorer" target="_blank">stellar-explorer</a>
@@ -131,28 +164,6 @@
     </div>
 
     <div class="repo-card">
-      <a class="repo-name" href="https://github.com/tuomashatakka/tuomashatakka" target="_blank">tuomashatakka</a>
-      <div class="repo-description">No description provided</div>
-      <div class="repo-meta">
-        <span class="meta-item">⭐ 0</span>
-        <span class="meta-item">🍴 0</span>
-        <span class="meta-item">📅 2026-04-29</span>
-      </div>
-      <span class="language">HTML</span>
-    </div>
-
-    <div class="repo-card">
-      <a class="repo-name" href="https://github.com/tuomashatakka/aueio-player-desktop" target="_blank">aueio-player-desktop</a>
-      <div class="repo-description">No description provided</div>
-      <div class="repo-meta">
-        <span class="meta-item">⭐ 5</span>
-        <span class="meta-item">🍴 0</span>
-        <span class="meta-item">📅 2026-04-28</span>
-      </div>
-      <span class="language">JavaScript</span>
-    </div>
-
-    <div class="repo-card">
       <a class="repo-name" href="https://github.com/tuomashatakka/tuohinen" target="_blank">tuohinen</a>
       <div class="repo-description">No description provided</div>
       <div class="repo-meta">
@@ -161,17 +172,6 @@
         <span class="meta-item">📅 2026-04-25</span>
       </div>
       <span class="language">TypeScript</span>
-    </div>
-
-    <div class="repo-card">
-      <a class="repo-name" href="https://github.com/tuomashatakka/eslint-config" target="_blank">eslint-config</a>
-      <div class="repo-description">Default eslint configuration for tuomashatakka&#x27;s projects pls</div>
-      <div class="repo-meta">
-        <span class="meta-item">⭐ 0</span>
-        <span class="meta-item">🍴 0</span>
-        <span class="meta-item">📅 2026-04-22</span>
-      </div>
-      <span class="language">JavaScript</span>
     </div>
 
     <div class="repo-card">
