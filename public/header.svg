@@ -1,0 +1,42 @@
+<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { font-family: Arial, sans-serif; font-size: 60px; font-weight: bold; text-anchor: middle; dominant-baseline: middle; }
+    .subtext { font-family: Arial, sans-serif; font-size: 20px; fill: #8b949e; text-anchor: middle; dominant-baseline: middle; }
+    
+    .t-main { fill: #c9d1d9; }
+    .t-red { fill: #ff0055; mix-blend-mode: screen; animation: glitch1 2.5s infinite linear alternate-reverse; opacity: 0.8; }
+    .t-blue { fill: #00ffff; mix-blend-mode: screen; animation: glitch2 3s infinite linear alternate-reverse; opacity: 0.8; }
+    .scanline { stroke: #00ffff; stroke-width: 2; opacity: 0.3; animation: scan 6s infinite linear; }
+
+    @keyframes glitch1 {
+      0% { clip-path: inset(20% 0 80% 0); transform: translate(-4px, 2px); }
+      20% { clip-path: inset(80% 0 5% 0); transform: translate(4px, -2px); }
+      40% { clip-path: inset(50% 0 30% 0); transform: translate(-4px, 2px); }
+      60% { clip-path: inset(5% 0 80% 0); transform: translate(4px, -2px); }
+      80% { clip-path: inset(30% 0 40% 0); transform: translate(-4px, 2px); }
+      100% { clip-path: inset(90% 0 0% 0); transform: translate(4px, -2px); }
+    }
+    @keyframes glitch2 {
+      0% { clip-path: inset(10% 0 60% 0); transform: translate(4px, -2px); }
+      20% { clip-path: inset(30% 0 20% 0); transform: translate(-4px, 2px); }
+      40% { clip-path: inset(70% 0 10% 0); transform: translate(4px, -2px); }
+      60% { clip-path: inset(20% 0 50% 0); transform: translate(-4px, 2px); }
+      80% { clip-path: inset(40% 0 40% 0); transform: translate(4px, -2px); }
+      100% { clip-path: inset(80% 0 5% 0); transform: translate(-4px, 2px); }
+    }
+    @keyframes scan {
+      0% { transform: translateY(-50px); }
+      100% { transform: translateY(300px); }
+    }
+  </style>
+  
+  <line x1="0" y1="0" x2="800" y2="0" class="scanline" />
+
+  <!-- Glitch Text Layers -->
+  <text x="50%" y="45%" class="text t-red">Tuomas Hatakka</text>
+  <text x="50%" y="45%" class="text t-blue">Tuomas Hatakka</text>
+  <text x="50%" y="45%" class="text t-main">Tuomas Hatakka</text>
+
+  <!-- Subtext -->
+  <text x="50%" y="65%" class="subtext">f10qq</text>
+</svg>
