@@ -104,7 +104,7 @@
 
     <div class="stats">
       <div class="stat-card">
-        <span class="stat-value">90</span>
+        <span class="stat-value">91</span>
         <span class="stat-label">Repositories</span>
       </div>
       <div class="stat-card">
@@ -120,8 +120,19 @@
     <div class="repos-grid">
 
     <div class="repo-card">
-      <a class="repo-name" href="https://github.com/tuomashatakka/vectors-code-plugin" target="_blank">vectors-code-plugin</a>
+      <a class="repo-name" href="https://github.com/tuomashatakka/icaros-flight-sim" target="_blank">icaros-flight-sim</a>
       <div class="repo-description">No description provided</div>
+      <div class="repo-meta">
+        <span class="meta-item">⭐ 0</span>
+        <span class="meta-item">🍴 0</span>
+        <span class="meta-item">📅 2026-06-25</span>
+      </div>
+      <span class="language">HTML</span>
+    </div>
+
+    <div class="repo-card">
+      <a class="repo-name" href="https://github.com/tuomashatakka/threejs-scenes-skill" target="_blank">threejs-scenes-skill</a>
+      <div class="repo-description">Production three.js WebGL scene-building skill for Claude Code</div>
       <div class="repo-meta">
         <span class="meta-item">⭐ 0</span>
         <span class="meta-item">🍴 0</span>
@@ -136,7 +147,7 @@
       <div class="repo-meta">
         <span class="meta-item">⭐ 0</span>
         <span class="meta-item">🍴 0</span>
-        <span class="meta-item">📅 2026-06-24</span>
+        <span class="meta-item">📅 2026-06-25</span>
       </div>
       <span class="language">TypeScript</span>
     </div>
@@ -147,20 +158,20 @@
       <div class="repo-meta">
         <span class="meta-item">⭐ 0</span>
         <span class="meta-item">🍴 0</span>
-        <span class="meta-item">📅 2026-06-24</span>
+        <span class="meta-item">📅 2026-06-25</span>
       </div>
       <span class="language">HTML</span>
     </div>
 
     <div class="repo-card">
-      <a class="repo-name" href="https://github.com/tuomashatakka/threejs-scenes-skill" target="_blank">threejs-scenes-skill</a>
-      <div class="repo-description">Production three.js WebGL scene-building skill for Claude Code</div>
+      <a class="repo-name" href="https://github.com/tuomashatakka/vectors-code-plugin" target="_blank">vectors-code-plugin</a>
+      <div class="repo-description">No description provided</div>
       <div class="repo-meta">
         <span class="meta-item">⭐ 0</span>
         <span class="meta-item">🍴 0</span>
-        <span class="meta-item">📅 2026-06-16</span>
+        <span class="meta-item">📅 2026-06-25</span>
       </div>
-      <span class="language">HTML</span>
+      <span class="language">TypeScript</span>
     </div>
 
     <div class="repo-card">
