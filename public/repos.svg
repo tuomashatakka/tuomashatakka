@@ -104,11 +104,11 @@
 
     <div class="stats">
       <div class="stat-card">
-        <span class="stat-value">94</span>
+        <span class="stat-value">95</span>
         <span class="stat-label">Repositories</span>
       </div>
       <div class="stat-card">
-        <span class="stat-value">57</span>
+        <span class="stat-value">58</span>
         <span class="stat-label">Stars</span>
       </div>
       <div class="stat-card">
@@ -120,12 +120,23 @@
     <div class="repos-grid">
 
     <div class="repo-card">
-      <a class="repo-name" href="https://github.com/tuomashatakka/threejs-scenes-skill" target="_blank">threejs-scenes-skill</a>
-      <div class="repo-description">Production three.js WebGL scene-building skill for Claude Code</div>
+      <a class="repo-name" href="https://github.com/tuomashatakka/animated-svg-text" target="_blank">animated-svg-text</a>
+      <div class="repo-description">svg text handwritinc animations</div>
       <div class="repo-meta">
         <span class="meta-item">⭐ 0</span>
         <span class="meta-item">🍴 0</span>
-        <span class="meta-item">📅 2026-07-08</span>
+        <span class="meta-item">📅 2026-07-09</span>
+      </div>
+      <span class="language">TypeScript</span>
+    </div>
+
+    <div class="repo-card">
+      <a class="repo-name" href="https://github.com/tuomashatakka/hummingbird-design-system" target="_blank">hummingbird-design-system</a>
+      <div class="repo-description">An elegant design system</div>
+      <div class="repo-meta">
+        <span class="meta-item">⭐ 0</span>
+        <span class="meta-item">🍴 0</span>
+        <span class="meta-item">📅 2026-07-09</span>
       </div>
       <span class="language">TypeScript</span>
     </div>
@@ -136,9 +147,64 @@
       <div class="repo-meta">
         <span class="meta-item">⭐ 0</span>
         <span class="meta-item">🍴 0</span>
-        <span class="meta-item">📅 2026-07-08</span>
+        <span class="meta-item">📅 2026-07-09</span>
       </div>
       <span class="language">TypeScript</span>
+    </div>
+
+    <div class="repo-card">
+      <a class="repo-name" href="https://github.com/tuomashatakka/devil-dice-cow" target="_blank">devil-dice-cow</a>
+      <div class="repo-description">devil dice clone with a cow</div>
+      <div class="repo-meta">
+        <span class="meta-item">⭐ 0</span>
+        <span class="meta-item">🍴 0</span>
+        <span class="meta-item">📅 2026-07-09</span>
+      </div>
+      <span class="language">TypeScript</span>
+    </div>
+
+    <div class="repo-card">
+      <a class="repo-name" href="https://github.com/tuomashatakka/line-spacer-game" target="_blank">line-spacer-game</a>
+      <div class="repo-description">tron 3d</div>
+      <div class="repo-meta">
+        <span class="meta-item">⭐ 0</span>
+        <span class="meta-item">🍴 0</span>
+        <span class="meta-item">📅 2026-07-09</span>
+      </div>
+      <span class="language">TypeScript</span>
+    </div>
+
+    <div class="repo-card">
+      <a class="repo-name" href="https://github.com/tuomashatakka/vibe-base" target="_blank">vibe-base</a>
+      <div class="repo-description">No description provided</div>
+      <div class="repo-meta">
+        <span class="meta-item">⭐ 1</span>
+        <span class="meta-item">🍴 0</span>
+        <span class="meta-item">📅 2026-07-09</span>
+      </div>
+      <span class="language">TypeScript</span>
+    </div>
+
+    <div class="repo-card">
+      <a class="repo-name" href="https://github.com/tuomashatakka/threejs-scenes-skill" target="_blank">threejs-scenes-skill</a>
+      <div class="repo-description">Production three.js WebGL scene-building skill for Claude Code</div>
+      <div class="repo-meta">
+        <span class="meta-item">⭐ 0</span>
+        <span class="meta-item">🍴 0</span>
+        <span class="meta-item">📅 2026-07-09</span>
+      </div>
+      <span class="language">TypeScript</span>
+    </div>
+
+    <div class="repo-card">
+      <a class="repo-name" href="https://github.com/tuomashatakka/tuomashatakka" target="_blank">tuomashatakka</a>
+      <div class="repo-description">No description provided</div>
+      <div class="repo-meta">
+        <span class="meta-item">⭐ 0</span>
+        <span class="meta-item">🍴 0</span>
+        <span class="meta-item">📅 2026-07-09</span>
+      </div>
+      <span class="language">HTML</span>
     </div>
 
     <div class="repo-card">
@@ -153,45 +219,12 @@
     </div>
 
     <div class="repo-card">
-      <a class="repo-name" href="https://github.com/tuomashatakka/tuomashatakka" target="_blank">tuomashatakka</a>
-      <div class="repo-description">No description provided</div>
-      <div class="repo-meta">
-        <span class="meta-item">⭐ 0</span>
-        <span class="meta-item">🍴 0</span>
-        <span class="meta-item">📅 2026-07-08</span>
-      </div>
-      <span class="language">HTML</span>
-    </div>
-
-    <div class="repo-card">
       <a class="repo-name" href="https://github.com/tuomashatakka/vectors-code-plugin" target="_blank">vectors-code-plugin</a>
       <div class="repo-description">No description provided</div>
       <div class="repo-meta">
         <span class="meta-item">⭐ 0</span>
         <span class="meta-item">🍴 0</span>
         <span class="meta-item">📅 2026-07-07</span>
-      </div>
-      <span class="language">TypeScript</span>
-    </div>
-
-    <div class="repo-card">
-      <a class="repo-name" href="https://github.com/tuomashatakka/hummingbird-design-system" target="_blank">hummingbird-design-system</a>
-      <div class="repo-description">An elegant design system</div>
-      <div class="repo-meta">
-        <span class="meta-item">⭐ 0</span>
-        <span class="meta-item">🍴 0</span>
-        <span class="meta-item">📅 2026-07-07</span>
-      </div>
-      <span class="language">TypeScript</span>
-    </div>
-
-    <div class="repo-card">
-      <a class="repo-name" href="https://github.com/tuomashatakka/vibe-base" target="_blank">vibe-base</a>
-      <div class="repo-description">No description provided</div>
-      <div class="repo-meta">
-        <span class="meta-item">⭐ 0</span>
-        <span class="meta-item">🍴 0</span>
-        <span class="meta-item">📅 2026-07-04</span>
       </div>
       <span class="language">TypeScript</span>
     </div>
@@ -227,17 +260,6 @@
         <span class="meta-item">📅 2026-07-02</span>
       </div>
       <span class="language">HTML</span>
-    </div>
-
-    <div class="repo-card">
-      <a class="repo-name" href="https://github.com/tuomashatakka/line-spacer-game" target="_blank">line-spacer-game</a>
-      <div class="repo-description">tron 3d</div>
-      <div class="repo-meta">
-        <span class="meta-item">⭐ 0</span>
-        <span class="meta-item">🍴 0</span>
-        <span class="meta-item">📅 2026-07-01</span>
-      </div>
-      <span class="language">TypeScript</span>
     </div>
 
     <div class="repo-card">
@@ -335,17 +357,6 @@
         <span class="meta-item">⭐ 0</span>
         <span class="meta-item">🍴 0</span>
         <span class="meta-item">📅 2026-04-25</span>
-      </div>
-      <span class="language">TypeScript</span>
-    </div>
-
-    <div class="repo-card">
-      <a class="repo-name" href="https://github.com/tuomashatakka/animated-svg-text" target="_blank">animated-svg-text</a>
-      <div class="repo-description">svg text handwritinc animations</div>
-      <div class="repo-meta">
-        <span class="meta-item">⭐ 0</span>
-        <span class="meta-item">🍴 0</span>
-        <span class="meta-item">📅 2026-04-14</span>
       </div>
       <span class="language">TypeScript</span>
     </div>
